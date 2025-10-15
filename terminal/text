@@ -1,0 +1,29 @@
+m > _gateway: ICMP6, neighbor advertisement, tgt is syn-2603-8081-6ff0-7620-fa7a-1c5a-ac91-cd76.res6.spectrum.com, length 24
+00:16:31.617796 IP6 ubuntu > syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com: ICMP6, neighbor solicitation, who has syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com, length 32
+00:16:31.619518 IP6 syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com > ubuntu: ICMP6, neighbor advertisement, tgt is syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com, length 24
+00:16:32.939577 IP6 _gateway > ip6-allnodes: ICMP6, router advertisement, length 160
+00:16:32.942797 IP6 ubuntu > ff02::16: HBH ICMP6, multicast listener report v2, 5 group record(s), length 108
+00:16:33.010653 IP6 syn-2603-8081-6ff0-7620-fa7a-1c5a-ac91-cd76.res6.spectrum.com.45389 > syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com.domain: 21771+ [1au] PTR? 6.1.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.0.2.0.f.f.ip6.arpa. (101)
+00:16:33.142369 IP6 syn-2603-8081-6ff0-7620-0000-0000-0000-0001.res6.spectrum.com.domain > syn-2603-8081-6ff0-7620-fa7a-1c5a-ac91-cd76.res6.spectrum.com.45389: 21771 NXDomain 0/1/1 (165)
+^C
+47244 packets captured
+47244 packets received by filter
+0 packets dropped by kernel
+ubuntu@ubuntu:~$ sudo tcpdump -i wlp3s0 > tcpdumptrafficfromwlp3s0.txt
+tcpdump: verbose output suppressed, use -v[v]... for full protocol decode
+listening on wlp3s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C16 packets captured
+16 packets received by filter
+0 packets dropped by kernel
+ubuntu@ubuntu:~$ sudo tcpdump -i wlp3s0 -v > tcpdumptrafficfromwlp3s0.txt 
+tcpdump: listening on wlp3s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C26962 packets captured
+27491 packets received by filter
+529 packets dropped by kernel
+ubuntu@ubuntu:~$ sudo tcpdump -i wlp3s0 -v > tcpdumptrafficfromwlp3s02.txt 
+tcpdump: listening on wlp3s0, link-type EN10MB (Ethernet), snapshot length 262144 bytes
+^C52756 packets captured
+55004 packets received by filter
+2238 packets dropped by kernel
+ubuntu@ubuntu:~$ sudo tcpdump -i wlp3s0 -v > tcpdumptrafficfromwlp3s02.txt 
+
